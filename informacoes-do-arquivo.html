@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informações do Arquivo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Informações do Arquivo</h1>
+    
+    <p id="fileName"></p>
+    <p id="fileSize"></p>
+    <a id="downloadButton" class="download-link">Fazer Download</a>
+    
+    <script>
+        const fileInfoName = document.getElementById("fileName");
+        const downloadButton = document.getElementById("downloadButton");
+
+        const params = new URLSearchParams(window.location.search);
+        const fileName = params.get("name");
+        const fileLink = params.get("link");
+
+        if (fileName && fileLink) {
+    const cleanFileName = decodeURIComponent(fileName).replace("Arquivo selecionado: ", "");
+    fileInfoName.innerHTML = `Arquivo selecionado: <strong>${cleanFileName}</strong>`;
+    downloadButton.href = decodeURIComponent(fileLink);
+    downloadButton.textContent = "Fazer Download";
+    downloadButton.setAttribute("download", cleanFileName);
+
+    const fileSize = formatFileSize(getParameterByName("size")); // Replace with your code to get the file size from URL
+    document.getElementById("fileSize").textContent = `Tamanho do arquivo: ${fileSize}`;
+}
+    </script>
+</body>
+</html>

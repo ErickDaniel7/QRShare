@@ -1,0 +1,155 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 400px;
+}
+
+.author {
+    font-size: 12px;
+    color: #999; /* Cor de texto mais leve */
+    margin-top: 0px; /* Espaçamento superior */
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.file-label {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;}
+
+#fileInput {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-group label:hover,
+#copyButton:hover {
+    background-color: #0056b3; /* Cor azul escura ao passar o mouse */
+}
+
+#sendButton:hover {
+    background-color: #218838;
+}
+
+.download-link:hover {
+    background-color: #218838;
+}
+
+.qr-code-container {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#qrCode {
+    border: 5px solid white; /* Adicione borda branca ao redor do QR code */
+    max-width: 100%;
+}
+
+#downloadLink {
+    font-size: 12px;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.download-link {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.download-link:hover {
+    background-color: #218838;
+}
+
+#copyButton {
+    display: none;
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor azul */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+#copyButton:hover {
+    background-color: #0056b3; /* Cor azul escura ao passar o mouse */
+}
+
+/* Centraliza o botão de copiar */
+.qr-code-container button {
+    display: block;
+    margin: 0 auto;
+}
+
+.copy-message {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+}

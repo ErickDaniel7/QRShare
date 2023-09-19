@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QRShare - Compartilhe Arquivos via QR Code</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <footer>
+            <p class="author">Autor: Erick Daniel Teixeira Vier</p>
+        </footer>
+        <h1>QRShare</h1>
+        <div class="button-group">
+            <input type="file" id="fileInput">
+            <label for="fileInput" class="file-label">Escolha um arquivo</label>
+        </div>
+        <p id="fileName"><strong></strong></p>
+        <p id="fileSize"></p>
+
+        <button id="sendButton">Enviar</button>
+        <div class="qr-code-container">
+            <img id="qrCode" alt="QR Code">
+            <p id="downloadLink"></p>
+            <a id="downloadButton" download class="download-link">Fazer Download</a>
+            <button id="copyButton" onclick="copyDownloadLink()">Copiar Link</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
