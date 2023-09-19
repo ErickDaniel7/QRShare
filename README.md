@@ -8,6 +8,12 @@ O QRShare consiste em um sistema web que permite ao usuário escolher um arquivo
 
 <hr>
 
+<details>
+  <summary><h4>Licença QRShare</h4></summary>
+  <p>Clique no link abaixo para baixar o PDF da Licença MIT do QRShare.</p>
+  <p><a href="https://github.com/ErickDaniel7/QRShare/blob/main/Licença%20MIT%20QRShare.pdf">Baixar Licença MIT</a></p>
+</details>
+
 <br>
 
 ![QRShare](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/QRShare.png)
