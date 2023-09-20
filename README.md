@@ -25,3 +25,6 @@ O QRShare consiste em um sistema web que permite ao usuário escolher um arquivo
 ![Qrcode&Download](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/Qrcode%26Download.png)
 
 ![Qrcode&Download](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/BoxLink.png)
+
+![InformaçõesArquivoDownload](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/InformaçõesArquivoDownload.png)
+
