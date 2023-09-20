@@ -6,29 +6,46 @@
 </head>
 <body>
     <div class="container">
+        <footer>
+            <p class="author">Autor: Erick Daniel Teixeira Vier</p>
+        </footer>
         <h1>Informações do Arquivo</h1>
     
-    <p id="fileName"></p>
-    <p id="fileSize"></p>
-    <a id="downloadButton" class="download-link">Fazer Download</a>
+        <p id="fileName"></p>
+        <p id="fileSize"></p>
+        <a id="downloadButton" class="download-link">Fazer Download</a>
+    </div>
     
     <script>
+        function formatFileSize(size) {
+            if (size < 1024) {
+                return size + ' bytes';
+            } else if (size < 1024 * 1024) {
+                return (size / 1024).toFixed(2) + ' KB';
+            } else if (size < 1024 * 1024 * 1024) {
+                return (size / (1024 * 1024)).toFixed(2) + ' MB';
+            } else {
+                return (size / (1024 * 1024 * 1024)).toFixed(2) + ' GB';
+            }
+        }
+
         const fileInfoName = document.getElementById("fileName");
-        const downloadButton = document.getElementById("downloadButton");
+const fileSizeDisplay = document.getElementById("fileSize");
+const downloadButton = document.getElementById("downloadButton");
 
-        const params = new URLSearchParams(window.location.search);
-        const fileName = params.get("name");
-        const fileLink = params.get("link");
+const params = new URLSearchParams(window.location.search);
+const fileName = params.get("name");
+const fileSize = window.localStorage.getItem("fileSize");
 
-        if (fileName && fileLink) {
+if (fileName && fileSize) {
     const cleanFileName = decodeURIComponent(fileName).replace("Arquivo selecionado: ", "");
     fileInfoName.innerHTML = `Arquivo selecionado: <strong>${cleanFileName}</strong>`;
-    downloadButton.href = decodeURIComponent(fileLink);
     downloadButton.textContent = "Fazer Download";
-    downloadButton.setAttribute("download", cleanFileName);
+    downloadButton.style.display = 'block';
 
-    const fileSize = formatFileSize(getParameterByName("size")); // Replace with your code to get the file size from URL
-    document.getElementById("fileSize").textContent = `Tamanho do arquivo: ${fileSize}`;
+    // Exibir os dados do arquivo
+    const fileSizeFormatted = formatFileSize(Number(fileSize));
+    fileSizeDisplay.textContent = `Tamanho do arquivo: ${fileSizeFormatted}`;
 }
     </script>
 </body>
