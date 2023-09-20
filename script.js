@@ -42,13 +42,25 @@ function generateQRCode() {
             const fileData = event.target.result;
             const qrCodeData = 'data:' + file.type + ';base64,' + fileData.split(',')[1];
 
+            // Calcular o tamanho do arquivo
+            const fileSize = file.size;
+
+            // Armazenar os dados do arquivo e o tamanho em localStorage
+            window.localStorage.setItem('fileData', qrCodeData);
+            window.localStorage.setItem('fileSize', fileSize);
+
             qrCodeImage.src = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(qrCodeData) + '&size=150x150';
             qrCodeContainer.style.display = 'block';
+
             const downloadLink = qrCodeData;
             downloadButton.href = downloadLink;
-            downloadButton.download = file.name; // Define o nome do arquivo para download
-            downloadButton.style.display = 'block'; // Mostra o botão de download
+            downloadButton.download = file.name;
+            downloadButton.style.display = 'block';
             copyButton.style.display = 'block';
+
+            // Passar os dados do arquivo para a página de informações
+            const infoPageLink = `informacoes-do-arquivo.html?name=${encodeURIComponent(file.name)}&size=${fileSize}`;
+            window.localStorage.setItem('infoPageLink', infoPageLink);
         }
         fileReader.readAsDataURL(file);
     }
