@@ -9,7 +9,7 @@ O QRShare consiste em um sistema web que permite ao usuário escolher um arquivo
 <details>
   <summary><h4>Visão geral partes do codigo</h4></summary>
   <summary><strong><h4>HTML</h4></strong></summary>
-  <p>O código HTML define duas páginas: uma página principal chamada "QRShare" e outra página chamada "Informações do Arquivo".</p>
+  <p>O código HTML define cinco páginas: uma página principal chamada <strong>"QRShare"</strong>, outra página chamada <strong>"Informações do Arquivo"</strong>, outa página chamada <strong>"About"</strong>, outa página chamada <strong>"Política de Privacidade"</strong> e por ultimo <strong>"Licença MIT"</strong>.</p>
   <summary><strong><h4>CSS</h4></strong></summary>
   <p>O CSS fornece estilos de formatação para a aparência da página, incluindo cores, fontes, tamanhos de botões e elementos, bem como a formatação de elementos de botão e contêineres.</p>
   <summary><strong><h4>JavaScript (script.js)</h4></strong></summary>
