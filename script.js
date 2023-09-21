@@ -75,11 +75,10 @@ function generateQRCode() {
 
 function copyDownloadLink() {
     const downloadLink = document.getElementById("downloadButton").getAttribute("href");
-const fileName = fileInput.files[0].name;
-const fileSize = fileInput.files[0].size;
+    const fileName = document.getElementById("fileName").textContent;
 
-// Gerar um link para a página de informações do arquivo
-const infoPageLink = `qr-share-theta.vercel.app/informacoes-do-arquivo.html?name=${encodeURIComponent(fileName)}&size=${fileSize}&link=${encodeURIComponent(downloadLink)}`;
+    // Gerar um link para a página de informações do arquivo
+    const infoPageLink = `qr-share-theta.vercel.app/informacoes-do-arquivo.html?name=${encodeURIComponent(fileName)}&size=${fileSize}&link=${encodeURIComponent(downloadLink)}`;
 
     // Copiar o link para a área de transferência
     const tempInput = document.createElement("input");
