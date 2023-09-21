@@ -48,8 +48,8 @@ function generateQRCode() {
             // Armazenar os dados do arquivo e o tamanho em localStorage
             window.localStorage.setItem('fileData', qrCodeData);
             window.localStorage.setItem('fileSize', fileSize);
-
-            qrCodeImage.src = 'https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(qrCodeData) + '&size=150x150';
+            
+            qrCodeImage.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example';
             qrCodeContainer.style.display = 'block';
 
             const downloadLink = qrCodeData;

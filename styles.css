@@ -17,6 +17,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 80%;
     max-width: 400px;
+    
 }
 
 .author {
@@ -144,7 +145,7 @@ button:hover {
 
 .copy-message {
     position: fixed;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.7);
@@ -153,3 +154,95 @@ button:hover {
     border-radius: 5px;
     z-index: 9999;
 }
+
+.footer-links {
+    text-align: center;
+    margin-top: 20px; /* Espaço entre o conteúdo principal e os links do rodapé */
+    font-size: 18px;
+    color: #999; /* Cor de texto mais leve */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0; 
+    z-index: 999; /* Garante que o rodapé esteja acima do conteúdo */
+}
+
+.footer-links a {
+    color:white; /* Substitua 'your-color' pela cor desejada */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+.footer-links a:hover {
+    color:#666666; /* Substitua 'your-hover-color' pela cor desejada quando o mouse estiver sobre o link */
+}
+
+.container2 {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 110%;
+    max-width: 1000px;
+    
+}
+
+.data {
+    font-size: 12px;
+    color: #999; /* Cor de texto mais leve */
+    margin-top: 0px; /* Espaçamento superior */
+}
+
+.creator {
+    font-size: 12px;
+    color: #999; /* Cor de texto mais leve */
+}
+
+.link a{
+    color:rgb(16, 39, 170); /* Substitua 'your-color' pela cor desejada */
+}
+
+.container3 {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 1000%;
+    max-width: 1000px;
+    
+}
+
+.footer-links2 {
+    text-align:center;
+    left: 0px;
+    font-size: 18px;
+    color: #999; /* Cor de texto mais leve */
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0; 
+    z-index: 999; /* Garante que o rodapé esteja acima do conteúdo */
+}
+
+.footer-links2 a {
+    color:white; /* Substitua 'your-color' pela cor desejada */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+.footer-links2 a:hover {
+    color:#666666; /* Substitua 'your-hover-color' pela cor desejada quando o mouse estiver sobre o link */
+}
+
+.container4 {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 1000%;
+    max-width: 1000px;
+    
+}
+
+
