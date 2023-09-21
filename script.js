@@ -50,7 +50,7 @@ function generateQRCode() {
             window.localStorage.setItem('fileSize', fileSize);
 
             // URL da página de informações do arquivo
-            const infoPageUrl = `qr-share-theta.vercel.app/informacoes-do-arquivo.html?name=${encodeURIComponent(file.name)}`;
+            const infoPageUrl = `qr-share-theta.vercel.app/informacoes-do-arquivo.html?name=${encodeURIComponent(file.name)}&size=${fileSize}&data=${encodeURIComponent(qrCodeData)}`;
 
             // Criar um link que inclui a URL da página de informações
             const qrCodeLink = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(infoPageUrl)}`;
@@ -75,10 +75,11 @@ function generateQRCode() {
 
 function copyDownloadLink() {
     const downloadLink = document.getElementById("downloadButton").getAttribute("href");
-    const fileName = document.getElementById("fileName").textContent;
+const fileName = fileInput.files[0].name;
+const fileSize = fileInput.files[0].size;
 
-    // Gerar um link para a página de informações do arquivo
-    const infoPageLink = `qr-share-theta.vercel.app/informacoes-do-arquivo.html?name=${encodeURIComponent(fileName)}&link=${encodeURIComponent(downloadLink)}`;
+// Gerar um link para a página de informações do arquivo
+const infoPageLink = `qr-share-theta.vercel.app/informacoes-do-arquivo.html?name=${encodeURIComponent(fileName)}&size=${fileSize}&link=${encodeURIComponent(downloadLink)}`;
 
     // Copiar o link para a área de transferência
     const tempInput = document.createElement("input");
