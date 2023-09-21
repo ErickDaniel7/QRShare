@@ -53,7 +53,7 @@ function generateQRCode() {
             const infoPageUrl = `qr-share-theta.vercel.app/informacoes-do-arquivo.html?name=${encodeURIComponent(file.name)}`;
 
             // Criar um link que inclui a URL da página de informações
-            const qrCodeLink = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(file.name)}`;
+            const qrCodeLink = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(infoPageUrl)}`;
 
             qrCodeImage.src = qrCodeLink;
             qrCodeContainer.style.display = 'block';
