@@ -48,8 +48,14 @@ function generateQRCode() {
             // Armazenar os dados do arquivo e o tamanho em localStorage
             window.localStorage.setItem('fileData', qrCodeData);
             window.localStorage.setItem('fileSize', fileSize);
-            
-            qrCodeImage.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example';
+
+            // URL da página de informações do arquivo
+            const infoPageUrl = `informacoes-do-arquivo.html?name=${encodeURIComponent(file.name)}`;
+
+            // Criar um link que inclui a URL da página de informações
+            const qrCodeLink = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(infoPageUrl)}`;
+
+            qrCodeImage.src = qrCodeLink;
             qrCodeContainer.style.display = 'block';
 
             const downloadLink = qrCodeData;
@@ -65,6 +71,7 @@ function generateQRCode() {
         fileReader.readAsDataURL(file);
     }
 }
+
 
 function copyDownloadLink() {
     const downloadLink = document.getElementById("downloadButton").getAttribute("href");
