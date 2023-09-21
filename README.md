@@ -41,13 +41,15 @@ Em resumo, o código HTML, CSS e JavaScript fornecidos criam uma aplicação que
 
 <br>
 
+![InterfaceCompleta](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/InterfaceCompleta.png)
+
 ![QRShare](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/QRShare.png)
 
 ![EscolherArquivo](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/EscolherArquivo.png)
 
 ![InformaçõesArquivo](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/InformaçõesArquivo.png)
 
-![Qrcode&Download](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/Qrcode%26Download.png)
+![Qrcode&Download](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/Qrcode.png)
 
 ![Qrcode&Download](https://github.com/ErickDaniel7/QRShare/blob/main/Imagens/BoxLink.png)
 
